@@ -26,5 +26,5 @@ O conjunto de dados com informações de vendas da Super Store, possui uma tabel
 - sub_category: Representa a subcategoria de produtos dentro da categoria principal;
 - year: Representa o ano em que o pedido foi feito;
 - market2: Outra coluna relacionada a informações de mercado (contém as mesmas informações da coluna market);
-weeknum: Representa o número da semana em que o pedido foi feito;
+- weeknum: Representa o número da semana em que o pedido foi feito;
 
