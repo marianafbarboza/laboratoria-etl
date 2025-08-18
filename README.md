@@ -40,4 +40,13 @@ Sabe-se que em contraponto, esse esquema apresenta possíveis redundâncias e oc
   - tabela dim_cliente: customer_id (PK), customer_name, segment, city, state, region, country;
   - tabela dim_produto: product_id (PK), product_name, category, sub_category;
   - tabela dim_tempo: date_id (PK), full_date, year, weeknum;
+    
+Destaca-se que na tabela dim_tempo será armazenada uma data única presente no conjunto de dados, e na sequência atributos temporais como ano e número da semana. Tanto a data do pedido (order_date) quanto a data do envio (ship_date) são referenciadas na tabela fato_pedidos por chaves estrangeiras que apontam para registros distintos.
+
+Nesta tabela, foi criado date_id (YYYYMMDD) como identificador único (PK), que será a FK da tabela fato_pedidos. Além disso, full_date nesse caso, através da função UNION, junta as datas order_date e ship_date, dando o mesmo nome às duas, além de garantir que não haja datas repetidas. A tabela dim_tempo possui, portanto, uma única linha por data, apesar de na tabela fato_pedidos, usarmos uma vez para order_date_id e outra para ship_date_id. Optei por organizar a informação dessa maneira para manter uma estrutura mais limpa e normalizada. 
+
+Com base na estrutura apresentada anteriormente, e considerando, que o arquivo CSV com os dados brutos, já havia sido importado no BigQuery, optou-se pela transformação da tabela “bruta” em tabelas de fato e dimensões, com comandos SQL (CREATE TABLE).
+
+
+
 
