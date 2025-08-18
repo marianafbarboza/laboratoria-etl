@@ -36,8 +36,8 @@ Sabe-se que em contraponto, esse esquema apresenta possíveis redundâncias e oc
 
 - Tabela Fato: constitui a tabela central, com dados quantitativos e informações dos pedidos realizados (tabela fato_pedidos). Contendo as seguintes colunas: row_id (PK), order_id, customer_id, product_id, order_date_id, ship_date_id, quantity, discount, sales, profit, shipping_cost, order_priority, market, market2, unknown;
 
-- Tabelas de Dimensões: tratam-se das tabelas com descrições ou categorias, ligadas a tabela fato, geralmente, por chaves primárias (PK) usadas como chaves estrangeiras (FK) na tabela fato. Neste caso, temos:
-tabela dim_cliente: customer_id (PK), customer_name, segment, city, state, region, country;
-tabela dim_produto: product_id (PK), product_name, category, sub_category;
-tabela dim_tempo: date_id (PK), full_date, year, weeknum;
+- Tabelas de Dimensões: tratam-se das tabelas com descrições ou categorias, ligadas a tabela fato, geralmente, por chaves primárias (PK) usadas como chaves estrangeiras (FK) na tabela fato. Neste caso, desenhamos a estrutura com 3 tabelas.
+  - tabela dim_cliente: customer_id (PK), customer_name, segment, city, state, region, country;
+  - tabela dim_produto: product_id (PK), product_name, category, sub_category;
+  - tabela dim_tempo: date_id (PK), full_date, year, weeknum;
 
