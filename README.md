@@ -10,7 +10,7 @@ O processo de ETL consiste basicamente em 3 etapas:
 
 - Transformação: Nesta etapa, os dados extraídos são transformados conforme os requisitos do sistema. As transformações podem incluir limpeza de dados, conversão de formatos, combinação de dados de múltiplas fontes, filtragem e outras operações que garantam que os dados sejam consistentes e úteis para a análise.
 
-- Carregamento: A fase final envolve carregar os dados transformados no sistema de destino, que geralmente é um Data Warehouse ou base de dados projetados para análise de negócios, como o BigQuery. Os dados agora estão prontos para ser consultados e analisados de forma eficiente.
+- Carregamento: A fase final envolve carregar os dados transformados no sistema de destino, que geralmente é um Data Warehouse ou base de dados projetados para análise de negócios, como o BigQuery. Os dados agora estão prontos para consultas e análises desejadas.
 
 
 # 2. Ferramentas e Tecnologias utilizadas
@@ -22,3 +22,14 @@ O processo de ETL consiste basicamente em 3 etapas:
 # 3. Conjunto de dados (dataset)
 O conjunto de dados com informações de vendas da Super Store, está disponível no arquivo *superstore.zip* desde projeto.
 A descrição de como está organizada a tabela fonte e suas respectivas variáveis está [aqui](dataset.md).
+
+# 4. Processamento e Preparação da base de dados
+Visando realizar uma correta preparação da base de dados, assim como analisar a consistência dos mesmos, foram realizadas consultas para verificar possíveis valores nulos e/ou duplicados. Além de checar possíveis discrepâncias em dados das variáveis categóricas e numéricas (valores inválidos ou fora do padrão esperado).
+
+# 5. Estruturação da base de dados
+Nesse ponto do projeto foi avaliada a melhor maneira de estruturar a base de dados, considerando esquema de estrela ou floco de neve. 
+
+Tendo em vista o objetivo da Super Store de melhorar a identificação de padrões, tendências e oportunidades de mercado, entende-se que faz mais sentido focar em consultas otimizadas e uma estrutura mais simples para analistas e BI, portanto, optou-se pelo esquema de estrela.
+Sabe-se que em contraponto, esse esquema apresenta possíveis redundâncias e ocupa mais espaço para armazenamento, no entanto, para as consultas, dashboards e relatórios a serem construídos, parece o melhor custo-benefício. Segue a estrutura implementada:
+
+!(<img width="1477" height="715" alt="tabelas_projeto" src="https://github.com/user-attachments/assets/b3913491-75b9-46e0-ab11-4c04f239d989" />)
