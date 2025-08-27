@@ -6,7 +6,7 @@ A loja Super Store enfrenta o desafio de lidar com grandes volumes de dados disp
 Este projeto concentra-se na criação de um sistema abrangente que permita extrair dados de diversas fontes, transformá-los conforme as necessidades específicas da Super Store e carregá-los de forma eficiente em um Data warehouse organizado. Além disso, objetiva-se aumentar a capacidade da Super Store de identificar padrões, tendências e oportunidades de mercado. 
 
 O processo de ETL consiste basicamente em 3 etapas:
-- <u>Extração</u>: durante esta fase, os dados são extraídos de uma ou mais fontes de dados, que podem ser base de dados, arquivos planos, serviços web ou outras fontes. A extração envolve a coleta das informações necessárias para o processamento posterior.
+- *Extração*: durante esta fase, os dados são extraídos de uma ou mais fontes de dados, que podem ser base de dados, arquivos planos, serviços web ou outras fontes. A extração envolve a coleta das informações necessárias para o processamento posterior.
 
 - <u>Transformação</u>: Nesta etapa, os dados extraídos são transformados conforme os requisitos do sistema. As transformações podem incluir limpeza de dados, conversão de formatos, combinação de dados de múltiplas fontes, filtragem e outras operações que garantam que os dados sejam consistentes e úteis para a análise.
 
