@@ -60,6 +60,7 @@ O Pipeline envolve o processo automatizado de atualização dos dados que foram 
 
 A ideia baseia-se numa atualização realizada de forma incremental, utilizando apenas dados novos ou modificados, o que evita recriar as tabelas novamente a cada execução.
 
+
 # 7. Automatização das rotinas do Pipeline
 Visando a inclusão de processos automatizados na rotina da loja Super Store, pensei em incluir conjuntamente o Cloud Composer (ferramenta open source do Google Cloud Platform) como orquestrador do pipeline de dados, e o dbt (Data Build Tool) para auxílio na escrita e organização das consultas SQL. Seguindo assim as seguintes etapas:
 
