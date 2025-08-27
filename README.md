@@ -60,4 +60,22 @@ O Pipeline envolve o processo automatizado de atualização dos dados que foram 
 
 A ideia baseia-se numa atualização realizada de forma incremental, utilizando apenas dados novos ou modificados, o que evita recriar as tabelas novamente a cada execução.
 
+# 7. Automatização das rotinas do Pipeline
+Visando a inclusão de processos automatizados na rotina da loja Super Store, pensei em incluir conjuntamente o Cloud Composer (ferramenta open source do Google Cloud Platform) como orquestrador do pipeline de dados, e o dbt (Data Build Tool) para auxílio na escrita e organização das consultas SQL. Seguindo assim as seguintes etapas:
+
+## 7.1 Orquestração e Ingestão com Cloud Composer (Airflow no GPC)
+O Composer é o responsável por organizar o fluxo, carregar dados “brutos” e monitorar todo o processo, alertando sobre possíveis falhas. Com as etapas:
+  - Ingestão do CSV : Uma DAG (Directed Acyclic Graph), ou seja, o roteiro de tarefas do Airflow é configurada no Cloud Composer para monitorar um bucket do GCS (Google Cloud Storage). O bucket funciona como uma pasta no storage, quando o CSV for detectado, a DAG automaticamente será disparada;
+  - Carga para tabela bruta (landing zone): Uma task (tarefa dentro da DAG) carrega o CSV recebido para uma tabela no BigQuery, por ex: “superstore_raw”, que mantém os dados originais, sem qualquer transformação. Assim, tem-se sempre a versão original dos dados importados (tabela funciona como staging aqui);
+  - Disparo do dbt: Quando a carga bruta termina, o Composer chama o dbt para iniciar as transformações;
+  - Monitoramento e alertas: O Composer acompanha todo o processo descrito anteriormente e envia alertas (por email ou Slack, por exemplo), em caso de falhas, como CSV corrompido ou erro de conexão.
+
+## 7.2 Transformação e Modelagem com dbt
+O dbt assume a partir da tabela bruta no BigQuery, cuidando das transformações, boas práticas e documentação. Se divide nos seguintes passos:
+  - Fonte: Aqui a ideia é o carregamento do CSV no BigQuery (tabela superstore_raw já mencionada anteriormente), o dbt referencia essa tabela como source, ponto de partida para as transformações;
+  - Transformação inicial (staging): Nesse ponto o dbt roda queries SQL para limpar e padronizar os dados. São usadas como tabelas intermediárias de preparação (um rascunho). Esta etapa consiste na verdadeira limpeza e padronização dos dados;
+  - Construção das dimensões: Modelos específicos atualizam as tabelas de dimensão (dim_cliente, dim_produto, dim_tempo);
+  - Construção da tabela fato: Outro modelo cria a tabela fato_pedidos, juntando métricas e conectando às dimensões;
+  - Orquestração automática: O dbt entende a ordem correta e dependências: staging - dimensões - fato;
+  - Documentação e testes: O dbt gera documentação interativa (com diagramas de dependência) e também executa testes de qualidade visando garantir que os dados possuem IDs únicos, Datas não nulas e relação cliente-pedido consistente.
 
