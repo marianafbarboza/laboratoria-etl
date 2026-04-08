@@ -42,7 +42,11 @@ The project was structured into three main steps:
 
 ## 📁 Project Structure
 
-├── data/
+- data
+-   raw
+-   processed
+
+data/
 │   ├── raw/
 │   └── processed/
 │
