@@ -4,7 +4,7 @@ This project was developed as part of the Laboratória Bootcamp and focuses on b
 
 The goal is to collect raw data, clean and transform it, and make it ready for analysis and visualization.
 
---
+---
 
 ## 🎯 Objective
 - Extract data from source files;
@@ -12,14 +12,14 @@ The goal is to collect raw data, clean and transform it, and make it ready for a
 - Load processed data into a structured format;
 - Prepare data for analysis and reporting;
 
---
+---
 
 ## ⚙️ Tools & Technologies
 - Python;
 - SQL;
 - Jupyter Notebook;
 
---
+---
 
 ## 🔍 Methodology
 
@@ -38,7 +38,7 @@ The project was structured into three main steps:
 - Data stored in structured format;
 - Ready for analysis or visualization;
 
---
+---
 
 ## 📁 Project Structure
 
@@ -61,7 +61,7 @@ The project was structured into three main steps:
 │
 └── README.md
 
---
+---
 
 ## 📊 Key Improvements from ETL Process
 
@@ -70,7 +70,7 @@ The project was structured into three main steps:
 - Improved data consistency;
 - Created structured dataset for analysis;
 
---
+---
 
 ## 🚀 Next Steps
 - Automate pipeline execution;
