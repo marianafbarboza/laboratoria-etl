@@ -40,33 +40,6 @@ The project was structured into three main steps:
 
 ---
 
-## 📁 Project Structure
-
-- data
--   raw
--   processed
-
-data/
-│   ├── raw/
-│   └── processed/
-│
-├── notebooks/
-│   └── etl_process.ipynb
-│
-├── scripts/
-│   ├── extract.py
-│   ├── transform.py
-│   └── load.py
-│
-├── docs/
-│   └── methodology.md
-│
-├── assets/
-│
-└── README.md
-
----
-
 ## 📊 Key Improvements from ETL Process
 
 - Cleaned and standardized raw data;
