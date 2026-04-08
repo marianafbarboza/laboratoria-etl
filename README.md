@@ -16,11 +16,11 @@ The goal is to collect raw data, clean and transform it, and make it ready for a
 
 ## ⚙️ Tools & Technologies
 - BigQuery;
-- Google Sheets;
 - drawSQL;
-- SQL;
+- Google Sheets;
 - Jupyter Notebook;
 - Python;
+- SQL;
 
 ---
 
