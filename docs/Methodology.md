@@ -1,7 +1,7 @@
 # 🔍 Methodology
 
 ## Data Extraction
-Data was collected from [superstore.zip](/superstore.zip).
+Data was collected from [superstore.zip](/data/superstore.zip).
 
 ---
 
