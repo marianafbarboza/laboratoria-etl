@@ -96,3 +96,6 @@ Some exploratory insights that can be derived from the dataset:
 - A significant portion of revenue is concentrated in a small number of products;
 - Sales show variation over time, indicating possible seasonality;
 - Some customers demonstrate recurring purchasing behavior;
+
+This project demonstrates the importance of well-structured data pipelines in enabling reliable and scalable data analysis.
+It serves as a foundational layer for analytics, ensuring that downstream analysis is based on clean and consistent data.
