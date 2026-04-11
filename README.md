@@ -51,12 +51,22 @@ The project was structured into three main steps:
 
 ---
 
-## ✔️ “Business impact”
-This pipeline ensures reliable and clean data, improving data quality for decision-making.
+## ⚙️ Data Pipeline
+The data pipeline was designed to ensure scalability, data quality, and efficient transformations.
+It follows a layered architecture:
+
+- **Raw Layer**: ingestion of original CSV data into BigQuery
+- **Staging Layer**: data cleaning and standardization
+- **Data Modeling Layer**: transformation into a star schema
+- **Analytics Layer**: optimized tables for reporting and analysis
+
+![Data Pipeline](assets/data_pipeline_diagram.png)
+
+
+Future improvements include orchestration with Cloud Composer (Airflow) and transformation management with dbt.
 
 ---
 
-## 🚀 Next Steps
-- Automate pipeline execution;
-- Integrate with dashboards (Power BI / Looker);
-- Optimize transformations;
+## ✔️ “Business impact”
+This pipeline ensures reliable and clean data, improving data quality for decision-making.
+
