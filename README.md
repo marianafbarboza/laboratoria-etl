@@ -6,11 +6,10 @@ The goal is to collect raw data, clean and transform it, and make it ready for a
 
 ---
 
-## 🎯 Business Context and Goal
+## 🎯 Business context and main goal
 
 This project simulates a sales analytics scenario, where raw data is processed and structured to enable strategic analysis of customers, products, and revenue.
-The main goal is to build a data pipeline that transforms raw CSV data into a clean and organized data model, ready for analytical queries and BI tools.
-The pipeline was designed to support answering key business questions such as:
+The goal of this project is to build a reliable data pipeline and prepare data for analysis, enabling data-driven decision-making. The pipeline was designed to support answering key business questions such as:
 
 - Which products generate the most revenue?
 - Who are the most valuable customers?
