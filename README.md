@@ -25,7 +25,6 @@ The goal is to collect raw data, clean and transform it, and make it ready for a
 ---
 
 ## 🔍 Methodology
-
 The project was structured into three main steps:
 
 1. Extract
@@ -54,8 +53,6 @@ The project was structured into three main steps:
 
 ## ✔️ “Business impact”
 This pipeline ensures reliable and clean data, improving data quality for decision-making.
-
----
 
 ## 🚀 Next Steps
 - Automate pipeline execution;
