@@ -6,11 +6,16 @@ The goal is to collect raw data, clean and transform it, and make it ready for a
 
 ---
 
-## 🎯 Objective
-- Extract data from source files;
-- Transform and clean the data;
-- Load processed data into a structured format;
-- Prepare data for analysis and reporting;
+## 🎯 Business Context and Goal
+
+This project simulates a sales analytics scenario, where raw data is processed and structured to enable strategic analysis of customers, products, and revenue.
+The main goal is to build a data pipeline that transforms raw CSV data into a clean and organized data model, ready for analytical queries and BI tools.
+The pipeline was designed to support answering key business questions such as:
+
+- Which products generate the most revenue?
+- Who are the most valuable customers?
+- Is there any seasonality in sales over time?
+- Which product categories perform better?
 
 ---
 
@@ -42,12 +47,21 @@ The project was structured into three main steps:
 
 ---
 
-## 📊 Key Improvements from ETL Process
+## 🧩 Why Star Schema?
+A dimensional model (Star Schema) was implemented to:
 
-- Cleaned and standardized raw data;
-- Handled missing values;
-- Improved data consistency;
-- Created structured dataset for analysis;
+- Simplify analytical queries;
+- Improve performance for aggregations;
+- Enable efficient integration with BI tools;
+- Provide a clear separation between facts and dimensions;
+
+Fact table:
+- fato_pedidos: sales metrics;
+
+Dimension tables:
+- dim_cliente: customer information;
+- dim_produto: product details;
+- dim_tempo: time attributes;
 
 ---
 
@@ -75,3 +89,11 @@ Future improvements include orchestration with Cloud Composer (Airflow) and tran
 ## ✔️ “Business impact”
 This pipeline ensures reliable and clean data, improving data quality for decision-making.
 
+---
+
+## 📊 Insights
+
+Some exploratory insights that can be derived from the dataset:
+- A significant portion of revenue is concentrated in a small number of products;
+- Sales show variation over time, indicating possible seasonality;
+- Some customers demonstrate recurring purchasing behavior;
