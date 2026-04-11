@@ -54,6 +54,8 @@ The project was structured into three main steps:
 ## ✔️ “Business impact”
 This pipeline ensures reliable and clean data, improving data quality for decision-making.
 
+---
+
 ## 🚀 Next Steps
 - Automate pipeline execution;
 - Integrate with dashboards (Power BI / Looker);
