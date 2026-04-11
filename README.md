@@ -60,7 +60,12 @@ It follows a layered architecture:
 - **Data Modeling Layer**: transformation into a star schema
 - **Analytics Layer**: optimized tables for reporting and analysis
 
-![Data Pipeline](assets/data_pipeline_diagram.png)
+<h2 align="center"> Data Pipeline </h2>
+
+<p align="center">
+  <img src="assets/data_pipeline_diagram.png" width="700"/>
+</p>
+
 
 
 Future improvements include orchestration with Cloud Composer (Airflow) and transformation management with dbt.
